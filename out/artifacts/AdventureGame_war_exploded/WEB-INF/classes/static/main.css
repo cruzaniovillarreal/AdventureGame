@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.game-window {
+    border: 4px solid red;
+}
+
+.outer-game-window {
+    border: 4px solid lightblue;
+}
