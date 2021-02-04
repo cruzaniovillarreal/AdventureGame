@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 class IndexController {
 
-    public IndexController() {
+    @GetMapping("/game")
+    public String IndexController() {
+        return "index";
     }
 
 

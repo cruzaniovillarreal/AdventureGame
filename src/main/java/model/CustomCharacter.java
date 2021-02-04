@@ -1,6 +1,6 @@
 package model;
 
-public class Character {
+public class CustomCharacter {
     private String name;
     private int health;
     private int healthMax;
@@ -15,7 +15,7 @@ public class Character {
     private int defense;
     private int agility;
 
-    public Character(String name, int health, int potions, int attack, int defense, int agility) {
+    public CustomCharacter(String name, int health, int potions, int attack, int defense, int agility) {
         this.name = name;
         this.health = health;
         this.healthMax = health;
