@@ -1,0 +1,23 @@
+use adventuregame_db;
+
+insert into alignment_list (id, type)
+values (1, 'Neutral'),
+(2, 'Good'),
+(3, 'Evil');
+
+insert into base_characters (id, name, life, fate, strength, craft, gold, alignment, objects, followers)
+values
+       (1, 'Priest', ),
+       (2, 'Monk'),
+       (3, 'Prophetess'),
+       (4, 'Minstrel'),
+       (5, 'Elf'),
+       (6, 'Wizard'),
+       (7, 'Sorceress'),
+       (8, 'Assassin'),
+       (9, 'Ghoul'),
+       (10, 'Warrior'),
+       (11, 'Thief'),
+       (12, 'Druid'),
+       (13, 'Dwarf'),
+       (14, 'Troll');
