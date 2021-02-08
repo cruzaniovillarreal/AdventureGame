@@ -32,6 +32,7 @@ create table if not exists base_characters
     craft     int unsigned not null,
     gold      int unsigned not null,
     alignment int unsigned not null,
+    image text not null,
     objects   int unsigned,
     followers int unsigned,
     PRIMARY KEY (id),
