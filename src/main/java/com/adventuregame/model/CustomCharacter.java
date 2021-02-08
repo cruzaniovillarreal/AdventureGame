@@ -1,4 +1,4 @@
-package model;
+package com.adventuregame.model;
 
 public class CustomCharacter {
     private String name;

@@ -1,14 +1,11 @@
-package model;
-
-import com.fasterxml.jackson.databind.ser.Serializers;
+package com.adventuregame.model;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "alignment")
-public class Alignment implements java.io.Serializable{
-    private static final long serialVersionUID = 1L;
+public class Alignment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

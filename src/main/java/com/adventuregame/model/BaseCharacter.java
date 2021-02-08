@@ -1,13 +1,11 @@
-package model;
+package com.adventuregame.model;
 
 import javax.persistence.*;
-import javax.swing.*;
 import java.util.List;
 
 @Entity
-@Table(name = "base_characters")
-public class BaseCharacter implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+@Table(name = "base_character")
+public class BaseCharacter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,11 +36,10 @@ public class BaseCharacter implements java.io.Serializable {
     @JoinColumn(name = "alignment_id")
     private Alignment alignment;
 
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "basecharacter")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "baseCharacter")
     private List<Follower> followerList;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "basecharacter")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "baseCharacter")
     private List<Item> itemList;
 
     public BaseCharacter() {
