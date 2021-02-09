@@ -36,11 +36,22 @@ public class BaseCharacter {
     @JoinColumn(name = "alignment_id")
     private Alignment alignment;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "baseCharacter")
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "basecharacter_follower",
+            joinColumns = {@JoinColumn(name = "base_character_id")},
+            inverseJoinColumns = {@JoinColumn(name = "follower_id")}
+    )
     private List<Follower> followerList;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "baseCharacter")
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "basecharacter_item",
+            joinColumns = {@JoinColumn(name = "base_character_id")},
+            inverseJoinColumns = {@JoinColumn(name = "item_id")}
+    )
     private List<Item> itemList;
+
 
     public BaseCharacter() {
     }

@@ -2,6 +2,7 @@ package com.adventuregame.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "follower")
@@ -11,10 +12,23 @@ public class Follower {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; //auto generated id
 
-    @ManyToOne
-    @JoinColumn(name = "base_character_id")
-    private BaseCharacter baseCharacter;
+    @ManyToMany(mappedBy = "followerList")
+    private List<BaseCharacter> baseCharacterList;
 
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public List<BaseCharacter> getBaseCharacterList() {
+        return baseCharacterList;
+    }
+
+    public void setBaseCharacterList(List<BaseCharacter> baseCharacterList) {
+        this.baseCharacterList = baseCharacterList;
+    }
 }

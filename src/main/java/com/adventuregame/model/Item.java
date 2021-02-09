@@ -1,6 +1,7 @@
 package com.adventuregame.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "items")
@@ -16,9 +17,8 @@ public class Item {
     @Column(nullable = false)
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "base_character_id")
-    private BaseCharacter baseCharacter;
+    @ManyToMany(mappedBy = "itemList")
+    private List<BaseCharacter> baseCharacterList;
 
     public long getId() {
         return id;
@@ -44,11 +44,11 @@ public class Item {
         this.description = description;
     }
 
-    public BaseCharacter getBaseCharacter() {
-        return baseCharacter;
+    public List<BaseCharacter> getBaseCharacterList() {
+        return baseCharacterList;
     }
 
-    public void setBaseCharacter(BaseCharacter baseCharacter) {
-        this.baseCharacter = baseCharacter;
+    public void setBaseCharacterList(List<BaseCharacter> baseCharacterList) {
+        this.baseCharacterList = baseCharacterList;
     }
 }

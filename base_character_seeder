@@ -1,11 +1,11 @@
 use adventuregame_db;
 
-insert into alignment_list (id, type)
+insert into alignment (id, type)
 values (1, 'Neutral'),
        (2, 'Good'),
        (3, 'Evil');
 
-insert into base_characters (id, name, life, fate, strength, craft, gold, alignment, image, objects, followers)
+insert into base_character (id, name, life, fate, strength, craft, gold, alignment, image, objects, followers)
 values (1, 'Priest', 4, 5, 2, 4, 2, 2, '/img/priest.png', null, null),
        (2, 'Monk', 4, 5, 2, 3, 2, 2, '/img/monk.png', null, null),
        (3, 'Prophetess', 4, 2, 2, 4, 2, 2, '/img/prophetess.png', null, null),
