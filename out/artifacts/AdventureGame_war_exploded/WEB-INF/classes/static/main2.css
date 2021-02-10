@@ -7,21 +7,22 @@ body {
     height: 100vh;
 }
 
-.outer-game-window, .outer-title-window {
+.outer-game-window, .outer-title-window, .outer-scene-title-window {
     border: 4px solid lightblue;
 }
 
-.inner-game-window, .inner-title-window {
+.inner-game-window, .inner-title-window, .inner-scene-title-window {
     border: 4px solid red;
 }
 
 .outer-game-window {
-    height: 200px;
+    /*height: 200px;*/
 }
 
 .outer-title-window {
     margin-top: 50px;
 }
+
 
 .square {
     border: 2px solid lightgreen;

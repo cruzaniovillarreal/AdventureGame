@@ -7,10 +7,12 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
             integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" href="/main1.css">
+    <link rel="stylesheet" href="/main2.css">
 </head>
 <body>
 <main class="container-fluid main">
@@ -26,11 +28,11 @@
     </div>
     <div class="row outer-game-window justify-content-center">
         <div class="col-6 inner-game-window text-center">
-            <h1 class="scene-scenario">Game Text Here</h1>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <h1 class="scene-scenario text-center">Game Text Here</h1>
+            <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel" data-interval="false" style="width: 400px">
                 <div class="carousel-inner">
                     <div th:each="character : ${baseCharacterList}" class="carousel-item">
-                        <img class="d-block carousel-images mx-auto" th:src="@{${character.getImage()}}" alt="slide" style="max-height: 100px">
+                        <img class="d-block carousel-images mx-auto" th:src="@{${character.getImage()}}" alt="slide" style="max-height: 250px">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -51,7 +53,7 @@
     </div>
     <br>
     <br>
-    <div class="container-fluid game-board">
+    <div class="container-fluid game-board d-none">
         <div class="row outermost-game-ring justify-content-center">
             <div class="col-2 outermost-ring-square text-center left-corner left-side-square square">
                 <h1>OUTERMOST SQUARE</h1>
