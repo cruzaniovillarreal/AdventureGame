@@ -1,22 +1,22 @@
 use adventuregame_db;
 
+insert into base_character (id, name, life, fate, strength, craft, gold, alignment_id, image)
+values (1, 'Priest', 4, 5, 2, 4, 2, 2, '/img/priest.png'),
+       (2, 'Monk', 4, 5, 2, 3, 2, 2, '/img/monk.png'),
+       (3, 'Prophetess', 4, 2, 2, 4, 2, 2, '/img/prophetess.png'),
+       (4, 'Minstrel', 4, 5, 2, 4, 2, 2, '/img/minstrel.png'),
+       (5, 'Elf', 4, 3, 3, 4, 2, 2, '/img/elf.png'),
+       (6, 'Wizard', 4, 3, 2, 5, 2, 3, '/img/wizard.png'),
+       (7, 'Sorceress', 4, 3, 2, 4, 2, 3, '/img/sorceress.png'),
+       (8, 'Assassin', 4, 3, 3, 3, 2, 3, '/img/assassin.png'),
+       (9, 'Ghoul', 4, 4, 2, 4, 2, 3, '/img/ghoul.png'),
+       (10, 'Warrior', 5, 1, 4, 2, 2, 1, '/img/warrior.png'),
+       (11, 'Thief', 4, 2, 3, 3, 2, 1, '/img/thief.png'),
+       (12, 'Druid', 4, 4, 2, 4, 2, 1, '/img/druid.png'),
+       (13, 'Dwarf', 5, 5, 3, 3, 2, 1, '/img/dwarf.png'),
+       (14, 'Troll', 6, 1, 6, 1, 2, 1, '/img/troll.png');
+
 insert into alignment (id, type)
 values (1, 'Neutral'),
        (2, 'Good'),
        (3, 'Evil');
-
-insert into base_character (id, name, life, fate, strength, craft, gold, alignment, image, objects, followers)
-values (1, 'Priest', 4, 5, 2, 4, 2, 2, '/img/priest.png', null, null),
-       (2, 'Monk', 4, 5, 2, 3, 2, 2, '/img/monk.png', null, null),
-       (3, 'Prophetess', 4, 2, 2, 4, 2, 2, '/img/prophetess.png', null, null),
-       (4, 'Minstrel', 4, 5, 2, 4, 2, 2, '/img/minstrel.png', null, null),
-       (5, 'Elf', 4, 3, 3, 4, 2, 2, '/img/elf.png', null, null),
-       (6, 'Wizard', 4, 3, 2, 5, 2, 3, '/img/wizard.png', null, null),
-       (7, 'Sorceress', 4, 3, 2, 4, 2, 3, '/img/sorceress.png', null, null),
-       (8, 'Assassin', 4, 3, 3, 3, 2, 3, '/img/assassin.png', null, null),
-       (9, 'Ghoul', 4, 4, 2, 4, 2, 3, '/img/ghoul.png', null, null),
-       (10, 'Warrior', 5, 1, 4, 2, 2, 1, '/img/warrior.png', null, null),
-       (11, 'Thief', 4, 2, 3, 3, 2, 1, '/img/thief.png', null, null),
-       (12, 'Druid', 4, 4, 2, 4, 2, 1, '/img/druid.png', null, null),
-       (13, 'Dwarf', 5, 5, 3, 3, 2, 1, '/img/dwarf.png', null, null),
-       (14, 'Troll', 6, 1, 6, 1, 2, 1, '/img/troll.png', null, null);
