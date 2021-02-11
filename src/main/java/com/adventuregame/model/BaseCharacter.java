@@ -38,7 +38,7 @@ public class BaseCharacter {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name = "basecharacter_follower",
+            name = "base_character_follower",
             joinColumns = {@JoinColumn(name = "base_character_id")},
             inverseJoinColumns = {@JoinColumn(name = "follower_id")}
     )
@@ -46,7 +46,7 @@ public class BaseCharacter {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name = "basecharacter_item",
+            name = "base_character_item",
             joinColumns = {@JoinColumn(name = "base_character_id")},
             inverseJoinColumns = {@JoinColumn(name = "item_id")}
     )
