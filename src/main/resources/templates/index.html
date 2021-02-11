@@ -29,10 +29,17 @@
     <div class="row outer-game-window justify-content-center">
         <div class="col-6 inner-game-window text-center">
             <h1 class="scene-scenario text-center">Game Text Here</h1>
-            <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel" data-interval="false" style="width: 400px">
+            <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel" data-interval="false" style="width: 75%">
                 <div class="carousel-inner">
                     <div th:each="character : ${baseCharacterList}" class="carousel-item">
                         <img class="d-block carousel-images mx-auto" th:src="@{${character.getImage()}}" alt="slide" style="max-height: 250px">
+                        <div class="row justify-content-around mt-4 mb-2">
+                            <h5 class="">Life: <span th:text="${character.getLife()}"></span></h5>
+                            <h5>Strength: <span th:text="${character.getStrength()}"></span></h5>
+                            <h5>Craft: <span th:text="${character.getCraft()}"></span></h5>
+                            <h5>Fate: <span th:text="${character.getFate()}"></span></h5>
+                            <h5>Alignment: <span th:text="${character.getAlignment().getType()}"></span></h5>
+                        </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
