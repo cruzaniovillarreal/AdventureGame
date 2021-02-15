@@ -1,5 +1,6 @@
 package com.adventuregame.controllers;
 
+import com.adventuregame.model.BaseCharacter;
 import com.adventuregame.repositories.BaseCharacterRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,11 @@ class IndexController {
 
     @GetMapping("/game")
     public String IndexController(Model model) {
+
+        for (BaseCharacter bc : baseCharacterRepo.findAll()) {
+            System.out.println(bc.getName());
+        }
+
 
         model.addAttribute("baseCharacterList", baseCharacterRepo.findAll());
         return "index";

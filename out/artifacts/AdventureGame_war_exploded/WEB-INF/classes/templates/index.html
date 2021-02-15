@@ -29,10 +29,13 @@
     <div class="row outer-game-window justify-content-center">
         <div class="col-6 inner-game-window text-center">
             <h1 class="scene-scenario text-center">Game Text Here</h1>
+            <div class="form">
             <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel" data-interval="false" style="width: 75%">
                 <div class="carousel-inner">
                     <div th:each="character : ${baseCharacterList}" class="carousel-item">
                         <img class="d-block carousel-images mx-auto" th:src="@{${character.getImage()}}" alt="slide" style="max-height: 250px">
+                        <label class="form-check-label" th:for="character+${character.getId()}"></label>
+                        <input class="form-check-input mx-auto" th:id="character+${character.getId()}" type="radio" name="character-selection">
                         <div class="row justify-content-around mt-4 mb-2">
                             <h5 class="">Life: <span th:text="${character.getLife()}"></span></h5>
                             <h5>Strength: <span th:text="${character.getStrength()}"></span></h5>
@@ -50,6 +53,8 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+            </div>
+                <button type="submit">Select</button>
             </div>
         </div>
     </div>
